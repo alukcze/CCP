@@ -1,0 +1,6 @@
+name: Itsmyunderscore
+version: '${version}'
+main: me.itsmyunderscore.Itsmyunderscore
+api-version: 1.17
+authors: [ ItsMYunderscore ]
+description: Command control plugin
