@@ -6,20 +6,17 @@
 
 package me.itsmyunderscore.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class whoIs implements CommandExecutor {
-
+public class uuid implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        for (Player p : Bukkit.getOnlinePlayers()) {
-            p.sendMessage("Rimlik69 is gay");
+        if(sender instanceof Player){
+            sender.sendMessage("Your uuid is: "+ ((Player) sender).getUniqueId());
         }
-
         return false;
     }
 }
