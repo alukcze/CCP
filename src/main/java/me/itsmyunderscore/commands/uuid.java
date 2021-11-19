@@ -14,9 +14,17 @@ import org.bukkit.entity.Player;
 public class uuid implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(sender instanceof Player){
-            sender.sendMessage("Your uuid is: "+ ((Player) sender).getUniqueId());
+
+        try {
+
+
+            if (sender instanceof Player) {
+                sender.sendMessage("Your uuid is: " + ((Player) sender).getUniqueId());
+            }
+            return false;
+        } catch (Exception e) {
+            throw new RuntimeException("CCP - CommandExecutor / Error#03 - contact developer with this code");
         }
-        return false;
     }
+
 }

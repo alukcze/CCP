@@ -7,3 +7,5 @@ description: Command control plugin
 commands:
   whoisgay:
     description: Responds with who the gay is
+  getuuid:
+    description: Gives player their uuid

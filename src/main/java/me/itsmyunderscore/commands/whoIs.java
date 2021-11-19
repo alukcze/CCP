@@ -16,10 +16,16 @@ public class whoIs implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        for (Player p : Bukkit.getOnlinePlayers()) {
-            p.sendMessage("Rimlik69 is gay");
-        }
+        try {
 
-        return false;
+
+            for (Player p : Bukkit.getOnlinePlayers()) {
+                p.sendMessage("Rimlik69 is gay");
+            }
+
+            return false;
+        } catch (Exception e) {
+            throw new RuntimeException("CCP - PlayerCommandSendEvent / Error#03 - contact developer with this code");
+        }
     }
 }
